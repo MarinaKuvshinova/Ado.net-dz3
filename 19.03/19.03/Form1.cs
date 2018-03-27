@@ -52,11 +52,8 @@ namespace _19._03
             //sqlDateAdapter.Update(dataSet.Tables[0].Select(null, null, DataViewRowState.ModifiedCurrent));
 
             dataGridView2.DataSource = null;
-            sqlDateAdapter.Update(dataSet.Tables[0].Select(null, null, DataViewRowState.ModifiedCurrent));
             dataGridView2.DataSource = dataSet.Tables[0].GetChanges(DataRowState.Modified);
-
-
-
+            //sqlDateAdapter.Update(dataSet.Tables[0].Select(null, null, DataViewRowState.ModifiedCurrent));
         }
     }
 }
